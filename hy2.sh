@@ -79,7 +79,6 @@ ensure_cert() {
 # ---------- 写配置文件 ----------
 write_config() {
 cat > server.yaml <<EOF
-listen: ":${SERVER_PORT}"
 tls:
   cert: "$(pwd)/${CERT_FILE}"
   key: "$(pwd)/${KEY_FILE}"
