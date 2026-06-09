@@ -89,8 +89,8 @@ auth:
   type: "password"
   password: "${AUTH_PASSWORD}"
 bandwidth:
-  up: "300mbps"
-  down: "300mbps"
+  up: "1250mbps"
+  down: "1250mbps"
 quic:
   max_idle_timeout: "10s"
   max_concurrent_streams: 4
