@@ -34,7 +34,7 @@ PRIVATE_KEY=$(echo "$KEY_OUTPUT" | grep Private | awk '{print $3}')
 PUBLIC_KEY=$(echo "$KEY_OUTPUT" | grep Public | awk '{print $3}')
 
 # 设置回落 website
-FALLBACK_DOMAIN="www.microsoft.com"
+FALLBACK_DOMAIN="www.bing.com"
 
 # Reality 配置文件
 cat > config.json <<EOF
@@ -60,7 +60,7 @@ cat > config.json <<EOF
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "$FALLBACK_DOMAIN:443",
+          "dest": "$FALLBACK_DOMAIN:80",
           "xver": 0,
           "privateKey": "$PRIVATE_KEY",
           "shortIds": ["6a96"]
