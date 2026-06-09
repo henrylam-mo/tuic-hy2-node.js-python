@@ -14,7 +14,7 @@ elif [[ $# -ge 1 && -n "$1" ]]; then
   PORT="$1"
   echo "Port (arg): $PORT"
 else
-  PORT=3250
+  PORT=3128
   echo "Port (default): $PORT"
 fi
 
@@ -65,9 +65,9 @@ gen_vless_config() {
       "security": "reality",
       "realitySettings": {
         "show": false,
-        "dest": "$MASQ_DOMAIN:443",
+        "dest": "$MASQ_DOMAIN:80",
         "xver": 0,
-        "serverNames": ["$MASQ_DOMAIN", "www.microsoft.com"],
+        "serverNames": ["$MASQ_DOMAIN", "www.msn.com"],
         "privateKey": "$priv",
         "publicKey": "$pub",
         "shortIds": ["$shortId"],
