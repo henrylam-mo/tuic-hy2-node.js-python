@@ -7,7 +7,7 @@ set -e
 
 # ---------- 默认配置 ----------
 HYSTERIA_VERSION="latest"
-DEFAULT_PORT=80         # 自适应端口
+DEFAULT_PORT=443         # 自适应端口
 AUTH_PASSWORD="gunfight-lunatics-ancestor"   # 建议修改为复杂密码
 CERT_FILE="cert.pem"
 KEY_FILE="key.pem"
@@ -17,7 +17,7 @@ ALPN="h3"
 
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo "Hysteria2 极简部署脚本（Shell 版）"
-echo "支持命令行端口参数，如：bash hysteria2.sh 80"
+echo "支持命令行端口参数，如：bash hysteria2.sh 443"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 # ---------- 获取端口 ----------
