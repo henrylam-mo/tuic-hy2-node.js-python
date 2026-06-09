@@ -7,3 +7,4 @@
 
 ```
 curl -Ls https://raw.githubusercontent.com/henrylam-mo/tuic-hy2-node.js-python/main/vless+tcp+reality/vless+tcp+reality.sh | sed 's/\r$//' | bash
+```
