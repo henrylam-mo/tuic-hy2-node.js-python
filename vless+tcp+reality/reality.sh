@@ -25,7 +25,7 @@ get_xray() {
 UUID=$(cat /proc/sys/kernel/random/uuid)
 
 # Reality 默认端口
-PORT=443
+PORT=80
 
 # 生成 Reality 密钥
 echo "生成 Reality 私钥/公钥 ..."
@@ -102,7 +102,7 @@ echo "Reality 私钥：$PRIVATE_KEY"
 echo
 echo "VLESS Reality 节点如下："
 echo
-echo "vless://$UUID@$(hostname -I | awk '{print $1}'):$PORT?encryption=none&flow=xtls-rprx-vision&security=reality&pbk=$PUBLIC_KEY&fp=chrome&sid=6a96&sni=$FALLBACK_DOMAIN&type=tcp#Reality"
+echo "vless://$UUID@$(hostname -I | awk '{print $1}'):$PORT?encryption=none&flow=xtls-rprx-vision&security=reality&pbk=$PUBLIC_KEY&fp=edge&sid=6a96&sni=$FALLBACK_DOMAIN&type=tcp#Reality"
 echo
 echo "=========================================="
 echo "节点已生成，可直接导入客户端使用"
