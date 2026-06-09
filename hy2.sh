@@ -128,10 +128,6 @@ print_connection_info() {
     echo "  sni: ${SNI}"
     echo "  alpn: [\"${ALPN}\"]"
     echo "  insecure: true"
-    echo "socks5:"
-    echo "  listen: 127.0.0.1:1080"
-    echo "http:"
-    echo "  listen: 127.0.0.1:8080"
     echo "=========================================================================="
 }
 
