@@ -67,7 +67,7 @@ gen_vless_config() {
         "show": false,
         "dest": "$MASQ_DOMAIN:443",
         "xver": 0,
-        "serverNames": ["$MASQ_DOMAIN", "www.msn.com"],
+        "serverNames": ["$MASQ_DOMAIN", "www.bing.com"],
         "privateKey": "$priv",
         "publicKey": "$pub",
         "shortIds": ["$shortId"],
