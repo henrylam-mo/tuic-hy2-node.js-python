@@ -60,7 +60,7 @@ cat > config.json <<EOF
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "$FALLBACK_DOMAIN:80",
+          "dest": "$FALLBACK_DOMAIN:443",
           "xver": 0,
           "privateKey": "$PRIVATE_KEY",
           "shortIds": ["6a96"]
