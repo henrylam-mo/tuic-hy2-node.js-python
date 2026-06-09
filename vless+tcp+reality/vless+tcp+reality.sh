@@ -35,8 +35,8 @@ load_config() {
 # ========== 下载 Xray ==========
 get_xray() {
   if [[ ! -x "$VLESS_BIN" ]]; then
-    echo "Downloading Xray v1.8.23..."
-    curl -L -o xray.zip "https://github.com/XTLS/Xray-core/releases/download/v1.8.23/Xray-linux-64.zip" --fail --connect-timeout 15
+    echo "Downloading Xray v25.8.3..."
+    curl -L -o xray.zip "https://github.com/XTLS/Xray-core/releases/download/v25.8.3/Xray-linux-64.zip" --fail --connect-timeout 15
     unzip -j xray.zip xray -d . >/dev/null 2>&1
     rm -f xray.zip
     chmod +x "$VLESS_BIN"
