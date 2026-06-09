@@ -65,7 +65,7 @@ gen_vless_config() {
       "security": "reality",
       "realitySettings": {
         "show": false,
-        "dest": "$MASQ_DOMAIN:80",
+        "dest": "$MASQ_DOMAIN:443",
         "xver": 0,
         "serverNames": ["$MASQ_DOMAIN", "www.msn.com"],
         "privateKey": "$priv",
