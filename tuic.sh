@@ -111,7 +111,7 @@ receive_window = 16777216
 max_idle_time = "25s"
 
 [quic.congestion_control]
-controller = "new_reno"
+controller = "cubic"
 initial_window = 6291456
 EOF
 }
