@@ -71,7 +71,7 @@ gen_vless_config() {
         "privateKey": "$priv",
         "publicKey": "$pub",
         "shortIds": ["$shortId"],
-        "fingerprint": "chrome",
+        "fingerprint": "edge",
         "spiderX": "/"
       }
     },
@@ -97,7 +97,7 @@ gen_link() {
   local sid=$(grep "Short ID" reality_info.txt | awk '{print $4}')
 
   cat > "$VLESS_LINK" <<EOF
-vless://$VLESS_UUID@$ip:$PORT?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$MASQ_DOMAIN&fp=chrome&pbk=$pub&sid=$sid&type=tcp&spx=/#VLESS-Reality
+vless://$VLESS_UUID@$ip:$PORT?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$MASQ_DOMAIN&fp=edge&pbk=$pub&sid=$sid&type=tcp&spx=/#VLESS-Reality
 EOF
 
   echo "========================================="
