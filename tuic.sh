@@ -111,7 +111,7 @@ receive_window = 16777216
 max_idle_time = "25s"
 
 [quic.congestion_control]
-controller = "new_reno"
+controller = "bbr"
 initial_window = 6291456
 EOF
 }
@@ -136,7 +136,7 @@ generate_link() {
   local ip="$1"
   # 节点输出链接
   cat > "$LINK_TXT" <<EOF
-tuic://${TUIC_UUID}:${TUIC_PASSWORD}@${ip}:${TUIC_PORT}?congestion_control=new_reno&alpn=h3&allowInsecure=1&sni=${MASQ_DOMAIN}&udp_relay_mode=native&disable_sni=0&reduce_rtt=1&max_udp_relay_packet_size=8192#TUIC-${ip}
+tuic://${TUIC_UUID}:${TUIC_PASSWORD}@${ip}:${TUIC_PORT}?congestion_control=bbr&alpn=h3&allowInsecure=1&sni=${MASQ_DOMAIN}&udp_relay_mode=native&disable_sni=0&reduce_rtt=1&max_udp_relay_packet_size=8192#TUIC-${ip}
 EOF
   echo "🔗 TUIC link generated successfully:"
   cat "$LINK_TXT"
